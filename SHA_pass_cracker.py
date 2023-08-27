@@ -16,13 +16,12 @@ def crack_password(target_hash,dictionary):
 	return None
 
 if __name__ == "__main__":
-
-	target_hash = "2d00c503a7a9910fa619bd03fe770cd3b47606d18c327a8dc191cee2770dd7ab"
-	dictionary_file = "dictionary.txt"
+	target_hash = "2d00c503a7a9910fa619bd03fe770cd3b47606d18c327a8dc191cee2770dd7ab" ##give your target hash here
+	dictionary_file = "dictionary.txt" #this is path to your word list file
 	dictionary = read_dictionary(dictionary_file)
 	cracked_password = crack_password(target_hash, dictionary)
 
 	if cracked_password:
 		print(f"Password cracked, the password is : {cracked_password}")
 	else:
-		print("Password not found in dictionaly")
+		print("Password not found in dictionary")
