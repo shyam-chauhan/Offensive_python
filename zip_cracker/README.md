@@ -1,3 +1,3 @@
 #zip cracker
 
-Default password of crackit.zip is SYM
+Default password for crackit.zip is SYM
