@@ -1,4 +1,4 @@
-#domain lookup
+# domain lookup
 
 This tool looks up domain name and gethers information about it.
 
