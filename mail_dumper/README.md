@@ -18,3 +18,4 @@ I have used User Agent headers to make request.
 It is always advisable to use proxies while scrapping.
 
 
+![mail_dumper](https://github.com/shyam-chauhan/Offensive_python/assets/59696796/28322ce3-b844-4e33-b61c-ec7bfc98417c)
