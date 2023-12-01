@@ -18,4 +18,15 @@ I have used User Agent headers to make request.
 It is always advisable to use proxies while scrapping.
 
 
+
+version 1.1
+
+Dumps all E-mails from given links from a text file and writes output to mails.txt file
+
+
+version 1.2
+
+Modified code to search for specific keyword and dump that data only.
+
+
 ![mail_dumper](https://github.com/shyam-chauhan/Offensive_python/assets/59696796/28322ce3-b844-4e33-b61c-ec7bfc98417c)

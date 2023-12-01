@@ -1,7 +1,7 @@
 import requests
 import re
 
-url = ["https://ldce.ac.in", "https://sbi.co.in/web/about-us"] #urls of webpages from where you want to scrap E-mails
+url = ["www.example.com"] #urls of webpages from where you want to scrap E-mails
 
 headers = {'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36'}  #Request headers masqurading with windows firefox
 
