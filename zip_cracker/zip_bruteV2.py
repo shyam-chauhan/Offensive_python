@@ -4,7 +4,7 @@ from colorama import Fore
 
 zf = input("Enter password proteccted zip file name to crack : ")
 file = input("Enter filename to use it as password list : ")
-zf = ZipFile('target.zip')
+zf = ZipFile(zf)
 
 with open(file,'r') as f:
 	for i in f:
