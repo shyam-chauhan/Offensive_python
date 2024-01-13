@@ -39,7 +39,7 @@ def decrypt():		#decryption function defination
 		elif(temp.isupper()):		#checking if character is upper case
 			dec += chr((((ord(temp) - 68)%26)+65))		#decryting text by subtracting 3 from it
 		elif(temp == " "):		#checking if character is space
-			enc += " "		#adding space to decrypted text
+			dec += " "		#adding space to decrypted text
 		else:
 			print("Error!!")	#other than character(e.g. digits or special characters) encountered & printing error message
 			flag = 1		#setting up flag to 1
