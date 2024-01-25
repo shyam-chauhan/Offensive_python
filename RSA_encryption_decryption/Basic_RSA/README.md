@@ -43,7 +43,7 @@ USing
 
 - if you are looking for text ancrypter than please check - [RSA_v1.2](https://github.com/shyam-chauhan/Offensive_python/tree/main/RSA_encryption_decryption/RSA_V1.2)
 
--limit of numbers to be Encrypted totally depends upon generated keys and N.
+- limit of numbers to be Encrypted totally depends upon generated keys and N.
 
 ## Author
 
