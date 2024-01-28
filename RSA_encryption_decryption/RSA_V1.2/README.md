@@ -10,7 +10,7 @@ RSA algoritm implemetation in Python for encryption and decryption of text data.
 ## Installation and usage 
 
 - Clone repo to your local machine
-```bash
+  ```bash
   git clone https://github.com/shyam-chauhan/Offensive_python/tree/main/RSA_encryption_decryption/RSA_V1.2
   ```
 - Nevigate to file location
@@ -18,7 +18,7 @@ RSA algoritm implemetation in Python for encryption and decryption of text data.
   cd RSA_V1.2
   ```
 - Run file
-```python
+  ```python
   python3 rsa_v1.2.py
   ```
 
