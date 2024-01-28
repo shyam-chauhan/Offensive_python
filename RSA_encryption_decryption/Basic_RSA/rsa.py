@@ -1,7 +1,6 @@
 import math
 import random
 
-n = 0
 
 def random_prime():
     '''
@@ -45,7 +44,7 @@ def encrypt(text,key,n):
     return ((text**key) % n)
 
 def decrypt(cipher,key,n):
-     '''
+    '''
     function to perform decryption
     param cipher : cipher(number) to be decrypted
     param key : key to be used for decryption
@@ -80,11 +79,11 @@ if __name__ == '__main__':
                 n = int(input("Enter value of 'n' : "))
                 print("Text is : ",decrypt(cipher,key,n))
             elif(choice == 4):
-                exit()
+                raise Exception("Bye!")
             else:
                 print("Error ! choose from following options in numbers")
-    except:     #capturing any error
-        print("Error occured!")
+    except Exception as e:     #capturing any error
+        print(e)
         
             
                      
