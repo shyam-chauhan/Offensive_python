@@ -4,10 +4,18 @@ import random
 n = 0
 
 def random_prime():
+    '''
+    generates random prime number from given list prime_numbers
+    :return: prime number 
+    '''
     prime_numbers = [31, 37, 41, 43, 47, 53, 59, 61, 67, 71, 73, 79, 83, 89, 97,101]
     return random.choice(prime_numbers)
 
 def key_gen():
+    '''
+    private and public key generator functions for RSA
+    :return: private key, public key and N
+    '''
     global n
     p = random_prime()
     q = random_prime()
@@ -26,6 +34,12 @@ def key_gen():
         
 
 def encrypt(text,key,n):
+    '''
+    encryps given text using RSA method by converting letters to relevant ASCII 
+    :param text: text you want to enctypt
+    :param key: key to be used for encryption
+    :param n: N to be used for mod opration
+    '''
     encrypted_text = ""
     for i in text:
         if(i.isupper()):
@@ -40,6 +54,12 @@ def encrypt(text,key,n):
     return encrypted_text
 
 def decrypt(cipher,key,n):
+    '''
+    decrypts given cipher using RSA method and converts ASCII to chracters individually 
+    :param cipher: cipher(numbers) you want to decrypt 
+    :param key: key to be used for decryption
+    :param n: N to be used for mod opration
+    '''
     count = 1
     ascii_val = ""
     decoded_text = ""
