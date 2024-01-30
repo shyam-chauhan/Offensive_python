@@ -1,8 +1,6 @@
 import math
 import random
 
-n = 0
-
 def random_prime():
     '''
     generates random prime number from given list prime_numbers
@@ -42,11 +40,7 @@ def encrypt(text,key,n):
     '''
     encrypted_text = ""
     for i in text:
-        if(i.isupper()):
-            encoded_letter = (int(ord(i)) - 54)    
-        elif(i.islower()):
-            encoded_letter =(int(ord(i)) - 86)
-            print(encoded_letter)
+        encoded_letter = (ord(i))
         temp = str((encoded_letter**key) % n)
         while(len(temp) != 4):
             temp = str(0) + temp
@@ -69,14 +63,12 @@ def decrypt(cipher,key,n):
         if(len(ascii_val) == 4):
             ascii_val = int(ascii_val)
             decrypted_text = (ascii_val**key) % n
-            temp = (int(decrypted_text) + 86)
-            decoded_text += chr(temp)
+            decoded_text += chr(decrypted_text)
             ascii_val= ""
         
         count = count + 1
     return decoded_text
         
-
 if __name__ == '__main__':
     choice = 1
     try:
@@ -92,7 +84,6 @@ if __name__ == '__main__':
                 key = int(input("Enter key for encryption : "))
                 n = int(input("Enter value of 'n' : "))
                 msg = [pow(ord(char), key, n) for char in text]
-                print(msg)
                 print("Cipher is : ",encrypt(text,key,n))
             elif(choice == 3):
                 cipher = int(input("Enter cipher to decrypt : "))
@@ -104,7 +95,4 @@ if __name__ == '__main__':
             else:
                 print("Error ! choose from following options in numbers")
     except Exception as e:
-        print("Error occured!",e)
-        
-            
-                     
+        print("Error occured! : ",e)
