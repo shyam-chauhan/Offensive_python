@@ -71,8 +71,8 @@ def decrypt(cipher,key,n):
         
 if __name__ == '__main__':
     choice = 1
-    try:
-        while(choice != 4):
+    while(choice != 4):
+        try:
             choice = int(input("1.For key generation \n2.For Encryption \n3.For decryption \n4.Exit \nEnter number : "))
             if(choice == 1):
                 pbk,prk,n = key_gen()
@@ -94,5 +94,6 @@ if __name__ == '__main__':
                 exit()
             else:
                 print("Error ! choose from following options in numbers")
-    except Exception as e:
-        print("Error occured! : ",e)
+        except Exception as e:
+            print("Error occured! : ",e)
+        
