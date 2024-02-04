@@ -2,16 +2,16 @@
 def encrypt():   #encryption function defination
 	flag = 0	#flag variable declaration
 	text = input("Enter Text you want to encrypt: ") #taking input of plain text from user
-	key = int(input("Enter Key you want to use for encryption (default is 3) : " or 3))  #key that will decide how many letters needed to shift default is 3
+	key = int(input("Enter Key you want to use for encryption (default is 3) : ") or 3)  #key that will decide how many letters needed to shift default is 3
 	length = len(text) 	#determining length of input
 	enc = '' 	#encryption text variable declaration
 	
 	for i in range(0,length):   #loop until last character of plain text
 		temp = text[i]		#storing character in temp variable
 		if(temp.islower()):	#checking if character is lower case
-			enc += chr((((ord(temp) - (97-key))%26)+97))		#encryting text by adding key to it (check README for more details)
+			enc += chr((((ord(temp) - (ord('a')-key))%26)+ord('a')))		#encryting text by adding key to it (check README for more details)
 		elif(temp.isupper()):	#checking if character is upper case
-			enc += chr((((ord(temp) - (64-key))%26)+64))		#encryting text by adding key to it (check README for more details)
+			enc += chr((((ord(temp) - (ord('A')-key))%26)+ord('A')))		#encryting text by adding key to it (check README for more details)
 		elif(temp == " "):	#checking if character is space
 			enc += " "      #adding space to encrypted text
 		else:
@@ -29,16 +29,16 @@ def encrypt():   #encryption function defination
 def decrypt():		#decryption function defination
 	flag = 0		#flag variable declaration
 	text = input("Enter Text you want to decrypt: ")	#taking input of cypher text from user
-	key = int(input("Enter Key you want to use for decryption default is 3 : " or 3))	#key that will decide how many letters needed to shift default is 3
+	key = int(input("Enter Key you want to use for decryption default is 3 : ")or 3)	#key that will decide how many letters needed to shift default is 3
 	length = len(text)	#determining length of input
 	dec = ''		#decryption text variable declaration
 
 	for i in range(0,length):	#loop until last character of plain text
 		temp = text[i]		#storing character in temp variable
 		if(temp.islower()):		#checking if character is lower case
-			dec += chr((((ord(temp) - (97+key))%26)+97)) 	#decryting text by subtracting key from it (check README for more details)
+			dec += chr((((ord(temp) - (ord('a')+key))%26)+ord('a'))) 	#decryting text by subtracting key from it (check README for more details)
 		elif(temp.isupper()):		#checking if character is upper case
-			dec += chr((((ord(temp) - (65+key))%26)+65))		#decryting text by subtracting key from it (check README for more details)
+			dec += chr((((ord(temp) - (ord('A')+key))%26)+ord('A')))		#decryting text by subtracting key from it (check README for more details)
 		elif(temp == " "):		#checking if character is space
 			dec += " "		#adding space to decrypted text
 		else:
