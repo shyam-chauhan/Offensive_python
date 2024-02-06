@@ -144,16 +144,21 @@ if __name__ == '__main__':
         try:
             choice = int(input("1.For Encryption \n2.For Decryption \n3.Exit \nEnter number : "))
             if(choice == 1):
+                #encryption
                 text = input("Enter text to Encrypt : ")
                 key = input("Enter key :")
                 print("Encrypted text is :",encrypt(text,key))
             elif(choice == 2):
+                #decryption
                 text = input("Enter text to Decrypt : ")
                 key = input("Enter key :")
                 print("Decrypted text is :",decrypt(text,key))
             elif(choice == 3):
+                #exit
                 exit()
             else:
+                #something not from following options !!
                 print("Error ! choose from following options in numbers")
         except Exception as e:
+            #catching exceptions
             print("Error occured! : ",e)
